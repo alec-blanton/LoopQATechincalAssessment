@@ -9,8 +9,7 @@ export async function appLogin(page, url, email, password) {
 }
 
 export async function getColumn(page, columnName) {
-  const column = page.locator(`div:has(> h2:has-text('${columnName}'))`);
-  return column
+  return page.locator(`div:has(> h2:has-text('${columnName}'))`);
 }
 
 export async function getCard(column, cardText) {
