@@ -1,6 +1,5 @@
 export async function appLogin(page, url, email, password) {
     await page.goto(url);
-
     await page.locator("#username").fill(email);
     await page.locator("#password").fill(password);
     await page.getByRole("button", { name: "Sign in" }).click();
